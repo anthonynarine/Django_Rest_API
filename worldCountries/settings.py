@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    "chorsheaders.CorsMiddleware", #added middleware (python class that hooks into Django request response lifecycle. These classes are used to hold pieces of code taht are porcessed every time there is a request response)
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -74,15 +75,7 @@ TEMPLATES = [
 WSGI_APPLICATION = "worldCountires.wsgi.application"
 
 
-# Database
-# https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
-}
 
 
 # Password validation
@@ -131,3 +124,9 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = ("http://localhost:8000",
 )
+
+
+try:
+    from worldCountries.local_settings import *
+except ImportError:
+    pass
