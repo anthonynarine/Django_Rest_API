@@ -1,5 +1,5 @@
 """
-ASGI config for worldCountires project.
+ASGI config for worldCountries project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,9 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "worldCountires.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "worldCountries.settings")
 
 application = get_asgi_application()
-
-
-
