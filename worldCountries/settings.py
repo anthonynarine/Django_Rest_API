@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "countries.apps.CountriesConfig",
-    "chorsheaders", 
+    "corsheaders", 
     
 ]
 
@@ -120,8 +120,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # set allow all to true to access all ports. 
 CORS_ORIGIN_ALLOW_ALL = True
-CORS_ORIGIN_WHITELIST = ("http://localhost:8000",
-)
+# CORS_ORIGIN_WHITELIST = ("http://localhost:8000",
+# )
 
 
 try:
