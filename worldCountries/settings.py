@@ -42,8 +42,11 @@ INSTALLED_APPS = [
     
 ]
 
+ #added corsheader middleware below is updated from course to current version
+
+
 MIDDLEWARE = [
-    "chorsheaders.CorsMiddleware", #added middleware (python class that hooks into Django request response lifecycle. These classes are used to hold pieces of code taht are porcessed every time there is a request response)
+    "corsheaders.middleware.CorsMiddleware", #added middleware (python class that hooks into Django request response lifecycle. These classes are used to hold pieces of code taht are porcessed every time there is a request response)
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
